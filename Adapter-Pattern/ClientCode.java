@@ -7,12 +7,18 @@ public class ClientCode {
     int data;
     AdapterClass obj;
 
-    public ClientCode(AdapterClass obj) {
+    public ClientCode(AdapterClass obj, int data) {
         this.obj = obj;
+        this.data = data;
     }
 
-    public generateReport() {
+    public void generateReport() {
+        System.out.println("Inside Client Code Method");
+        System.out.println(data);
+
+        // Invokes method of AdapterClass
         obj.generateReport(data);
+
     }
 
 }

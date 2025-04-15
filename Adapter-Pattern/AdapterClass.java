@@ -1,15 +1,19 @@
 public class AdapterClass implements TargetInterface {
 
     //1. Create object of Adaptee Class
-    Report obj = new Report();
+    private Report obj = new Report();
 
 
-    //2. Implement the TargetInterface
-
+    //2. Implement the TargetInterface methods
     @Override
     public void generateReport(int data) {
-        // Convert XML to JSON
-        String dataString = new String(data);
+        System.out.println("Inside Adapter Class");
+        System.out.println("Input :" + data );
+
+        // Conversion Logic
+        String dataString = new String(Integer.toString(data));
+
+        System.out.println("Output :" + dataString + "  " + dataString.getClass());
 
         // invoke the Adaptee method with JSON data
         obj.generateReport(dataString);
