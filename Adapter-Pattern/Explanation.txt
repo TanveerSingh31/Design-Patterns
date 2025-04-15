@@ -26,9 +26,8 @@ Solution
 // Implementation
 
 1. Implement the Adapter Class that implements the Target Interface
-2. Adapter Class must create object of Adaptee Class, and call it's method.
+2. Adapter Class must create object of Adaptee Class, and call it's method after manipulating the data.
 3. Client Code -> Create Data-member of the Adapter Object , Set it in the constructor , as it will be passed while creating the object of client code
                 In Client Class -> in Charge Method, internally call method of the adapter object.
-
                 So If I invoke the method of Client Class Object, it will internally invoke method of the Adapter Class
 
