@@ -1,17 +1,18 @@
 // Example
 // Application generates XML data, but we want to connect it to class that accepts only JSON data
 
+// This class only works with XML
 public class ClientCode {
 
     int data;
-    Adapter obj;
+    AdapterClass obj;
 
-    public ClientCode(Adapter obj) {
+    public ClientCode(AdapterClass obj) {
         this.obj = obj;
     }
 
-    public convert() {
-        obj.convert(data);
+    public generateReport() {
+        obj.generateReport(data);
     }
 
 }

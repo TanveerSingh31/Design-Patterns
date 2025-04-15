@@ -1,4 +1,4 @@
 interface TargetInterface {
 
-    public void convert();
+    public void generateReport();
 }
