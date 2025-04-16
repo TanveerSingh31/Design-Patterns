@@ -1,0 +1,7 @@
+// Decorator Class -> Abstract class that extends the Abstract Class where concrete class is extending from
+
+
+// CustomDecorator Classes
+// -> Extend decorator class.
+// -> Implements same methods as in concrete class's Abstract class.
+// -> Stores the object, of the concrete class and invoke methods internally of it's own methods. 
