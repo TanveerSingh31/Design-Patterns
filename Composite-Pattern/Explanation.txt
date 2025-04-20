@@ -1,0 +1,53 @@
+=> Facade Pattern -
+- Lets us compose different Objects into tree structures and
+  then lets us work with these structures, as if they were individual objects.
+
+
+Example-
+Order contains -> Box containing other boxes + products
+
+Q- When to use ?
+When Objects can be represented in a tree structure
+Single Object encapsulating other objects
+
+
+=> Properties of Facade Pattern
+- Client can directly communicate with Composite Class Object (Tree), to get combines result of all its children
+  Instead of going directly to individual child and getting combined result.
+
+
+=> Components
+1. Parent Interface (Base Component) -
+    Interface that contains what methods will be present inside the Tree Structure & Leaf
+    (All individual objects) + (Composite Tree Structure)
+    must implement this parent Interface
+
+
+2. Leafs -
+    Individual Classes/Components that implement (Base Component) Interface inside them.
+    They do not have any sub-types, last component of the tree structure
+    Do not delegate tasks further ahead.
+
+
+3. Composite Element (**IMP) -
+    Tree that implements the (Base Component) interface inside it.
+    It is a Class that stores all the Objects of the Leafs come under the tree. (in an ArrayList<>)
+    It can store Composite elements as well inside it.
+    Methods - (it must contain these methods !!!)
+        1. AddElement - Add/Remove element from the composite Object (Tree)
+        2. RemoveElement -
+        3. GetChildren - Returns ArrayList of the Children stored inside it
+        4. execute() - Any fn. that we want combined result of all the children/leaf under the tree.
+                       Internally invokes same method of the children and returns accumulated result.
+
+
+
+=> Advantages
+- We can work with Tree Structure Objects more efficiently
+- We can introduce more different leafs without affecting any existing code
+
+
+=> When not to use ?
+- When your system Classes does not represent any Tree Structure.
+  i.e Objects are independent of each other, and are not enclosed within another Objects.
+
