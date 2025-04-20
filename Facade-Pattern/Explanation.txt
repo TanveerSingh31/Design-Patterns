@@ -1,0 +1,41 @@
+=> Facade Pattern
+Q- When to use ?
+- It encapsulates the complexity of the sub-system
+- Used to hide the internal complexity of system from the client.
+- Used for system, where multiple classes are used for a particular task.
+- Facade is the way for client to access the system.
+
+
+=> Properties of Facade Pattern
+1. Client can use the Facade layer, but is not forced to.
+   Client can directly communicate with the internal components as well.
+
+2. Facade Class can interact with objects of different classes. (multiple components)
+
+
+
+=> Components
+1. Client - client code that needs to interact with the subsystem.
+2. Facade - Class that will comprise all the functionalities / methods
+            that client needs and internally manage object of different classes / subsystems.
+3. Components/Subsystems -
+   Individual classes that perform their operation independently
+
+
+
+=> Advantages
+- If core logic / signature of any individual component/class changes,
+  we just need to make changes in facade class itself as only it contains the objects of individual components.
+  No changes Required in the Client code.
+
+- We hide the complexity from the Client code, therefore more readable
+
+
+
+=> When not to use ?
+- If the subsystem is not complex enough , no need to create facade
+
+
+
+
+
