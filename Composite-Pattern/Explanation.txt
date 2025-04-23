@@ -1,4 +1,4 @@
-=> Facade Pattern -
+=> Composite Pattern -
 - Lets us compose different Objects into tree structures and
   then lets us work with these structures, as if they were individual objects.
 
@@ -11,7 +11,7 @@ When Objects can be represented in a tree structure
 Single Object encapsulating other objects
 
 
-=> Properties of Facade Pattern
+=> Properties of Composite Pattern
 - Client can directly communicate with Composite Class Object (Tree), to get combines result of all its children
   Instead of going directly to individual child and getting combined result.
 
