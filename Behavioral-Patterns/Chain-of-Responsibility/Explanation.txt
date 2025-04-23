@@ -1,0 +1,53 @@
+
+=> Definition
+request from the client is passed to a chain of objects to process them.
+It consists of series of processing objects (Handlers) that handle the request
+Each "Handler" contains the next Handler's object, and passes on the request if not handled by current "Handler".
+
+
+
+=> Example-
+Logging -> different logs -> Error, Info, Debug
+These can have their concrete classes. and can be chained together
+The log method can be invoked, and depending on which class can handle that log
+    they can either handle it
+    or Pass it to the next handler in line.
+
+
+
+=> When to use ?
+- Used when request needs to pass multiple objects
+- Loose coupling in code
+
+
+=> Working
+ - Each requests get passed on to "handlers", for response
+ - The "handler" is that can process the request, handles the request and returns the response
+ - if current "handler" cannot process the request, passes the request to next handler in line.
+
+
+
+=> Components / Implementation
+ - 1. Handler Abstract Class (Properties/Methods)
+        - public nextHandler Obj
+        - Method that handles the logic -> whether this request can be handled by current handler, else next handler is passed on the request.
+
+ - 2. Handler Concrete Classes (Handlers)
+    All handlers classes extend from the handler Abstract class and implement the method to handle the request.
+    In constructor of Concrete Handler Class, we call the Abstract class constructor using super()
+
+ - 3. Client Code
+    Chains the handlers in the way it wants
+    Then passes on the request.
+
+
+
+=> Advantages
+- Loose coupling
+- Changing the sequence of handlers in chain is easy & simple
+- Single Responsibility Principle -> as all handlers only 1 responsibility
+
+
+
+=> Disadvantage
+- Can lead to deep stack traces, which can affect performance
