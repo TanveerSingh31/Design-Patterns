@@ -1,0 +1,5 @@
+What are Behavioral Design Patterns
+
+- It Guides,
+    - how different objects communicate with each other.
+    - distribute tasks, efficiently
